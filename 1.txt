@@ -1,0 +1,5 @@
+{
+  "// Note": "This is your Vercel credentials file. DO NOT SHARE!",
+  "// Docs": "https://vercel.com/docs/project-configuration#global-configuration/auth-json",
+  "token": "QiPc9ndO048156MS5ozd23dC"
+}
